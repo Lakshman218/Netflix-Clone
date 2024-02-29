@@ -16,6 +16,7 @@ export default function RowPost(props) {
       // alert('Network Error')
     })
   },[])
+
   const opts = {
     height: '390',
     width: '100%',
@@ -24,6 +25,7 @@ export default function RowPost(props) {
       autoplay: 1,
     },
   };
+
   const handleMovie = (id)=>{
     console.log(id);
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
@@ -32,6 +34,7 @@ export default function RowPost(props) {
       }
     })
   }
+  
   return (
     <div className='row'>
       <h2>{props.title}</h2>  

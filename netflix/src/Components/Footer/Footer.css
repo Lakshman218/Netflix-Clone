@@ -1,0 +1,49 @@
+.footer{
+  width: 100%;
+  background-color: #111;
+  height: 150px;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.email_title{
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.email_box{
+  margin-top: 15px;
+}
+
+.footer_input{
+  height: 38px;
+  width: 240px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border-color: rgb(225, 225, 225);
+  border-radius: 5px;
+  border: 1px solid;
+  background: transparent;
+  font-size: 15px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer_button{
+  height: 40px;
+  width: 120px;
+  color: #fff;
+  background-color: rgb(193, 17, 25);
+  font-size: 17px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

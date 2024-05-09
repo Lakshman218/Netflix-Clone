@@ -14,20 +14,24 @@
   display: none;
 }
 
-.poster{
+.poster {
   max-height: 250px;
   margin-right: 10px;
   cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  position: relative; /* Make sure the positioning context is set */
+}
+
+.poster:hover {
+  transform: scale(1.1);
+  z-index: 1; /* Ensure the hovered element has a higher stacking order */
 }
 
 .smallPoster{
   max-height: 150px;
   margin-right: 10px;
   cursor: pointer;  
-}
-
-.poster:hover{
-  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .smallPoster:hover{

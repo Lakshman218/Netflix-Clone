@@ -1,0 +1,44 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+}
+
+.logo {
+  position: fixed;
+  left: 20px;
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+
+/* .avatar {
+  position: fixed;
+  right: 20px;
+  width: 30px;
+} */
+
+.signin_button{
+  position: fixed;
+  right: 20px;
+  width: 74px;
+  height: 30px;
+  background-color: rgb(229, 9, 20);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.signin_button:hover{
+  transform: scale(1.1);
+}

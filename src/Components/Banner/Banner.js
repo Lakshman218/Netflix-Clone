@@ -5,12 +5,27 @@ import {API_KEY, imageUrl} from '../../Constants/Constant'
 
 export default function Banner() {
   const [movie, setMovie] = useState()
+
+  // useEffect(() => {
+  //   axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
+  //     console.log(response.data.results[0]);
+  //     setMovie(response.data.results[1])
+  //   })
+  // },[])
   useEffect(() => {
-    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
-      console.log(response.data.results[0]);
-      setMovie(response.data.results[1])
-    })
-  },[])
+    const fetchMovie = async () => {
+      try {
+        const response = await axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`);
+        const randomIndex = Math.floor(Math.random() * response.data.results.length);
+        setMovie(response.data.results[randomIndex]);
+      } catch (error) {
+        console.error('Error fetching movie:', error);
+      }
+    };
+
+    fetchMovie();
+  }, []);
+  
   return (
     <div style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ''})`}} 
     className='banner'>

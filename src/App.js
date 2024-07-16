@@ -14,7 +14,7 @@ function App() {
       <RowPost url={originals} title='Netflix Originals'/>
       <RowPost url={trending} title='Trending' isSmall/>
       <RowPost url={action} title='Action' isSmall/>
-      <RowPost url={horror} title='Action' isSmall/>
+      <RowPost url={horror} title='Horror' isSmall/>
       <Footer />
     </div>
   );
